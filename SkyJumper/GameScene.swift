@@ -12,10 +12,17 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
+		let test = SKLabelNode(fontNamed: "Chalkduster")
+		
+		test.text = "SkyJumper"
+		test.fontSize = 70
+		test.fontColor = UIColor(red: 0, green: 100, blue: 100, alpha: 50)
+		test.position = CGPoint(x: 89, y: 100)
+		myLabel.text = "Hello, World!";
         myLabel.fontSize = 65;
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
+		
+		self.addChild(test)
         self.addChild(myLabel)
     }
     
@@ -25,7 +32,7 @@ class GameScene: SKScene {
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
             
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
+            let sprite = SKSpriteNode(imageNamed:"SkillGames")
             
             sprite.xScale = 0.5
             sprite.yScale = 0.5
@@ -37,9 +44,10 @@ class GameScene: SKScene {
             
             self.addChild(sprite)
         }
-    }
-   
+	}
+	
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+		/* Called before each frame is rendered */
+		print(currentTime)
     }
 }

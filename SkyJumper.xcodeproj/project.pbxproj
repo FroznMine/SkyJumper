@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91F0FE71A0576F40027092F /* StandardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F0FE61A0576F40027092F /* StandardButton.swift */; };
+		B91F0FE91A05AD2D0027092F /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F0FE81A05AD2D0027092F /* MainMenu.swift */; };
+		B91F0FEB1A05AEE30027092F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F0FEA1A05AEE30027092F /* MainViewController.swift */; };
 		B937147F19DDE4D8001D8B0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937147E19DDE4D8001D8B0F /* AppDelegate.swift */; };
 		B937148119DDE4D8001D8B0F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B937148019DDE4D8001D8B0F /* GameScene.sks */; };
 		B937148319DDE4D8001D8B0F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937148219DDE4D8001D8B0F /* GameScene.swift */; };
@@ -28,11 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B91F0FE61A0576F40027092F /* StandardButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StandardButton.swift; path = Custom/Buttons/StandardButton.swift; sourceTree = "<group>"; };
+		B91F0FE81A05AD2D0027092F /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		B91F0FEA1A05AEE30027092F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B937147919DDE4D8001D8B0F /* SkyJumper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyJumper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B937147D19DDE4D8001D8B0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B937147E19DDE4D8001D8B0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B937148019DDE4D8001D8B0F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		B937148219DDE4D8001D8B0F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B937148219DDE4D8001D8B0F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 1; };
 		B937148419DDE4D8001D8B0F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B937148719DDE4D8001D8B0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B937148919DDE4D8001D8B0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -85,10 +91,13 @@
 				B937148019DDE4D8001D8B0F /* GameScene.sks */,
 				B937148219DDE4D8001D8B0F /* GameScene.swift */,
 				B937148419DDE4D8001D8B0F /* GameViewController.swift */,
+				B91F0FE81A05AD2D0027092F /* MainMenu.swift */,
 				B937148619DDE4D8001D8B0F /* Main.storyboard */,
+				B91F0FEA1A05AEE30027092F /* MainViewController.swift */,
 				B937148919DDE4D8001D8B0F /* Images.xcassets */,
 				B937148B19DDE4D8001D8B0F /* LaunchScreen.xib */,
 				B937147C19DDE4D8001D8B0F /* Supporting Files */,
+				B91F0FE61A0576F40027092F /* StandardButton.swift */,
 			);
 			path = SkyJumper;
 			sourceTree = "<group>";
@@ -167,6 +176,11 @@
 				TargetAttributes = {
 					B937147819DDE4D8001D8B0F = {
 						CreatedOnToolsVersion = 6.0.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					B937149119DDE4D9001D8B0F = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -219,7 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91F0FE91A05AD2D0027092F /* MainMenu.swift in Sources */,
+				B91F0FE71A0576F40027092F /* StandardButton.swift in Sources */,
 				B937148319DDE4D8001D8B0F /* GameScene.swift in Sources */,
+				B91F0FEB1A05AEE30027092F /* MainViewController.swift in Sources */,
 				B937148519DDE4D8001D8B0F /* GameViewController.swift in Sources */,
 				B937147F19DDE4D8001D8B0F /* AppDelegate.swift in Sources */,
 			);
@@ -346,9 +363,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SkyJumper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -356,9 +375,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SkyJumper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -415,6 +436,7 @@
 				B937149E19DDE4D9001D8B0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B937149F19DDE4D9001D8B0F /* Build configuration list for PBXNativeTarget "SkyJumperTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +445,7 @@
 				B93714A119DDE4D9001D8B0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
